@@ -1,0 +1,51 @@
+{
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnSave": true
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"[json]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"[less]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnSave": true
+	},
+	"[postcss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnSave": true
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml",
+		"editor.formatOnSave": true
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "always"
+	},
+	"eslint.format.enable": true,
+	"eslint.validate": ["json", "jsonc", "javascript", "typescript", "vue", "yaml", "yml"],
+	"stylelint.packageManager": "pnpm",
+	"stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
+	"stylelint.snippet": ["css", "less", "postcss", "scss", "vue", "sass"]
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+.histoire/
+
+.npmrc
+.env
+.DS_Store
+
+# Локальная сборка для проверки в проекте-потребителе
+*.tgz
