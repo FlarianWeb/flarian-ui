@@ -1,0 +1,408 @@
+.root {
+	cursor: pointer;
+	display: inline-flex;
+	gap: var(--ui-button-gap-y, var(--_gap-y)) var(--ui-button-gap-x, var(--_gap-x));
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding-block: var(--ui-button-padding-y, var(--_padding-y));
+	padding-inline: var(--ui-button-padding-x, var(--_padding-x));
+	font-family: var(--ui-button-font-family, var(--ui-font-family));
+	font-size: var(--ui-button-font-size, var(--_font-size));
+	font-weight: var(--ui-button-font-weight, var(--ui-font-weight-medium));
+	line-height: var(--ui-button-line-height, var(--_line-height));
+	white-space: nowrap;
+	vertical-align: top;
+	appearance: none;
+	border: var(--ui-button-border-size, var(--ui-space-px)) var(--ui-button-border-style, solid)
+		var(--_border_color, transparent);
+	border-radius: var(--ui-button-radius, var(--_radius));
+	transition:
+		color var(--ui-duration-fast) var(--ui-easing-sine),
+		background-color var(--ui-duration-fast) var(--ui-easing-sine),
+		border-color var(--ui-duration-fast) var(--ui-easing-sine),
+		opacity var(--ui-duration-fast) var(--ui-easing-sine),
+		outline-color var(--ui-duration-fast) var(--ui-easing-sine),
+		text-decoration-color var(--ui-duration-fast) var(--ui-easing-sine);
+
+	/*
+
+	outline: var(--_focus-ring-width) var(--_focus-ring-style) transparent;
+	outline-offset: var(--_focus-ring-offset);
+
+	&:focus-visible {
+		outline: var(--_focus-ring-width) var(--_focus-ring-style) var(--_focus-ring-color);
+	} */
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+}
+
+/*
+ * Элемент с текстом в кнопке
+ */
+.labelSlot {
+	flex-grow: 1;
+}
+
+/**
+ * Направление элементов
+ */
+.direction {
+	&-row {
+		flex-direction: row;
+	}
+
+	&-column {
+		flex-direction: column;
+	}
+}
+
+/**
+ * Размерная ось.
+ * Значения fallback продублированы в `config/components/`.
+ */
+.size {
+	&-xs {
+		--_font-size: var(--ui-button-font-size-xs, var(--ui-control-font-size-xs));
+		--_icon-size: var(--ui-button-icon-size-xs, var(--ui-control-icon-size-xs));
+		--_line-height: var(--ui-button-line-height-xs, var(--ui-control-line-height-xs));
+		--_padding-x: var(--ui-button-padding-x-xs, 0.5rem);
+		--_padding-y: var(--ui-button-padding-y-xs, 0.25rem);
+		--_gap-x: var(--ui-button-gap-x-xs, 0.125rem);
+		--_gap-y: var(--ui-button-gap-y-xs, 0.125rem);
+	}
+
+	&-sm {
+		--_font-size: var(--ui-button-font-size-sm, var(--ui-control-font-size-sm));
+		--_icon-size: var(--ui-button-icon-size-sm, var(--ui-control-icon-size-sm));
+		--_line-height: var(--ui-button-line-height-sm, var(--ui-control-line-height-sm));
+		--_padding-x: var(--ui-button-padding-x-sm, 0.75rem);
+		--_padding-y: var(--ui-button-padding-y-sm, 0.375rem);
+		--_gap-x: var(--ui-button-gap-x-sm, 0.1875rem);
+		--_gap-y: var(--ui-button-gap-y-sm, 0.1875rem);
+	}
+
+	&-md {
+		--_font-size: var(--ui-button-font-size-md, var(--ui-control-font-size-md));
+		--_icon-size: var(--ui-button-icon-size-md, var(--ui-control-icon-size-md));
+		--_line-height: var(--ui-button-line-height-md, var(--ui-control-line-height-md));
+		--_padding-x: var(--ui-button-padding-x-md, 1rem);
+		--_padding-y: var(--ui-button-padding-y-md, 0.5rem);
+		--_gap-x: var(--ui-button-gap-x-md, 0.25rem);
+		--_gap-y: var(--ui-button-gap-y-md, 0.25rem);
+	}
+
+	&-lg {
+		--_font-size: var(--ui-button-font-size-lg, var(--ui-control-font-size-lg));
+		--_icon-size: var(--ui-button-icon-size-lg, var(--ui-control-icon-size-lg));
+		--_line-height: var(--ui-button-line-height-lg, var(--ui-control-line-height-lg));
+		--_padding-x: var(--ui-button-padding-x-lg, 1.25rem);
+		--_padding-y: var(--ui-button-padding-y-lg, 0.625rem);
+		--_gap-x: var(--ui-button-gap-x-lg, 0.3125rem);
+		--_gap-y: var(--ui-button-gap-y-lg, 0.3125rem);
+	}
+
+	&-xl {
+		--_font-size: var(--ui-button-font-size-xl, var(--ui-control-font-size-xl));
+		--_icon-size: var(--ui-button-icon-size-xl, var(--ui-control-icon-size-xl));
+		--_line-height: var(--ui-button-line-height-xl, var(--ui-control-line-height-xl));
+		--_padding-x: var(--ui-button-padding-x-xl, 1.5rem);
+		--_padding-y: var(--ui-button-padding-y-xl, 0.75rem);
+		--_gap-x: var(--ui-button-gap-x-xl, 0.375rem);
+		--_gap-y: var(--ui-button-gap-y-xl, 0.375rem);
+	}
+}
+
+/**
+ * Цветовая ось
+ * Опирается на глобальные токены color и onColor
+ */
+.color {
+	&-base {
+		--_color: var(--ui-button-color, var(--ui-color-base));
+		--_on-color: var(--ui-button-on-color, var(--ui-theme-on-base, var(--ui-color-bg)));
+	}
+
+	&-neutral {
+		--_color: var(--ui-button-color, var(--ui-color-fg));
+		--_on-color: var(--ui-button-on-color, var(--ui-color-bg));
+	}
+
+	&-success {
+		--_color: var(--ui-button-color, var(--ui-color-success));
+		--_on-color: var(--ui-button-on-color, var(--ui-color-on-success, var(--ui-color-bg)));
+	}
+
+	&-warning {
+		--_color: var(--ui-button-color, var(--ui-color-warning));
+		--_on-color: var(--ui-button-on-color, var(--ui-color-on-warning, var(--ui-color-bg)));
+	}
+
+	&-error {
+		--_color: var(--ui-button-color, var(--ui-color-error));
+		--_on-color: var(--ui-button-on-color, var(--ui-color-on-error, var(--ui-color-bg)));
+	}
+
+	&-info {
+		--_color: var(--ui-button-color, var(--ui-color-info));
+		--_on-color: var(--ui-button-on-color, var(--ui-color-on-info, var(--ui-color-bg)));
+	}
+}
+
+/**
+ * Варианты кнопок.
+ */
+.variant {
+	&-solid {
+		--_border_color: var(--_color);
+		color: var(--_on-color);
+		background: var(--_color);
+
+		&:not(:disabled, .loading):hover {
+			background: var(
+				--ui-button-hover-color,
+				color-mix(
+					in oklab,
+					var(--ui-color-bg) var(--ui-button-hover-mix, 10%),
+					var(--_color)
+				)
+			);
+
+			/* border-color: var(
+				--ui-button-hover-color
+					color-mix(
+						in oklab,
+						var(--ui-color-bg) var(--ui-button-hover-mix, 10%),
+						var(--_color)
+					)
+			); */
+		}
+
+		&:not(:disabled, .loading):active {
+			/* background: var(
+				--ui-button-active-color
+					color-mix(
+						in oklab,
+						var(--ui-color-bg) var(--ui-button-active-mix, 20%),
+						var(--_color)
+					)
+			);
+			border-color: var(
+				--ui-button-active-color
+					color-mix(
+						in oklab,
+						var(--ui-color-bg) var(--ui-button-active-mix, 20%),
+						var(--_color)
+					)
+			); */
+		}
+	}
+
+	&-outlined {
+		--_border_color: var(--_color);
+		color: var(--_color);
+		background: transparent;
+
+		&:not(:disabled, .loading):hover {
+			/* background: var(
+				--ui-button-hover-color
+					color-mix(
+						in oklab,
+						var(--_color) var(--ui-button-hover-mix, 10%),
+						var(--ui-color-bg)
+					)
+			); */
+		}
+
+		&:not(:disabled, .loading):active {
+			/* background: var(
+				--ui-button-active-color
+					color-mix(
+						in oklab,
+						var(--_color) var(--ui-button-active-mix, 20%),
+						var(--ui-color-bg)
+					)
+			); */
+		}
+	}
+
+	&-soft {
+		color: var(--_color);
+		background: color-mix(in oklab, var(--_color) 12%, var(--ui-color-bg));
+
+		&:not(:disabled, .loading):hover {
+			/* background: var(
+				--ui-button-hover-color
+					color-mix(
+						in oklab,
+						var(--_color) calc(12% + var(--ui-button-hover-mix, 10%)),
+						var(--ui-color-bg)
+					)
+			); */
+		}
+
+		&:not(:disabled, .loading):active {
+			/* background: var(
+				--ui-button-active-color
+					color-mix(
+						in oklab,
+						var(--_color) calc(12% + var(--ui-button-active-mix, 20%)),
+						var(--ui-color-bg)
+					)
+			); */
+		}
+	}
+
+	&-ghost {
+		color: var(--_color);
+		background: transparent;
+
+		&:not(:disabled, .loading):hover {
+			/* background: var(
+				--ui-button-hover-color
+					color-mix(
+						in oklab,
+						var(--_color) var(--ui-button-hover-mix, 10%),
+						var(--ui-color-bg)
+					)
+			); */
+		}
+
+		&:not(:disabled, .loading):active {
+			/* background: var(
+				--ui-button-active-color
+					color-mix(
+						in oklab,
+						var(--_color) var(--ui-button-active-mix, 20%),
+						var(--ui-color-bg)
+					)
+			); */
+		}
+	}
+
+	&-link {
+		--_padding-y: 0;
+		--_padding-x: 0;
+		color: var(--_color);
+		text-decoration: underline;
+		text-decoration-color: currentcolor;
+		text-underline-offset: 0.25rem;
+		background: transparent;
+
+		&:not(:disabled, .loading):hover {
+			text-decoration-color: transparent;
+		}
+	}
+}
+
+/**
+ * Скругление кнопок
+ */
+.radius {
+	&-none {
+		--_radius: var(--ui-radius-none);
+	}
+
+	&-xxs {
+		--_radius: var(--ui-radius-xxs);
+	}
+
+	&-xs {
+		--_radius: var(--ui-radius-xs);
+	}
+
+	&-sm {
+		--_radius: var(--ui-radius-sm);
+	}
+
+	&-md {
+		--_radius: var(--ui-radius-md);
+	}
+
+	&-lg {
+		--_radius: var(--ui-radius-lg);
+	}
+
+	&-xl {
+		--_radius: var(--ui-radius-xl);
+	}
+
+	&-xxl {
+		--_radius: var(--ui-radius-xxl);
+	}
+
+	&-full {
+		--_radius: var(--ui-radius-full);
+	}
+}
+
+/**
+ * Иконки. `--ui-icon-size` — публичный хук самого Icon (Icon.vue): Button
+ * не спорит с ним за `width`/`height` напрямую (два `.icon`-класса от разных
+ * компонентов на одном svg — гонка специфичности), а прокидывает свой токен
+ * через переменную, которую Icon уже сам решает, как применить.
+ */
+.icon {
+	--ui-icon-size: var(--ui-button-icon-size, var(--_icon-size));
+
+	&-slot {
+		/* display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		width: var(--ui-button-icon-size, var(--_icon-size));
+		height: var(--ui-button-icon-size, var(--_icon-size));
+		padding: var(--ui-button-icon-padding, var(--ui-space-none)); */
+	}
+}
+
+/**
+ * Слот `trailing` — произвольный контент справа от текста:
+ * иконка, бейдж, обратный отсчёт и т.п.
+ */
+.trailing {
+	&-slot {
+		/* display: flex;
+		flex-shrink: 0;
+		align-items: center; */
+	}
+}
+
+/**
+ * Спиннер
+ */
+.spinner {
+	/* display: inline-block;
+	flex-shrink: 0;
+	width: 1em;
+	height: 1em;
+	border: 2px solid currentcolor;
+	border-top-color: transparent;
+	border-radius: 50%;
+	animation: spin var(--ui-duration-slow) linear infinite; */
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/**
+ * States — последними: выигрывают каскадом при равной специфичности.
+ */
+.loading {
+	cursor: wait;
+}
+
+/**
+ * Icon-only
+ * Осознанно игнорирует `--ui-button-padding-x`
+ * Иначе потребитель мог бы переопределить `--ui-button-padding-x` именно на icon-only
+ * Тем самым случайно сломать квадратную форму, которую этот класс обязан гарантировать.
+ */
+.iconOnly {
+	padding-inline: var(--_padding-y);
+}
