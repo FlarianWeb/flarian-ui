@@ -1,0 +1,20 @@
+/**
+ * Единая точка входа статических стилей пакета.
+ * Токены и темы генерируются плагином — здесь только глобальные правила (reset, базовые стили).
+ *
+ * `@import './fonts.css'` — рабочий путь только в dev/serve (histoire).
+ */
+@import './fonts.css';
+
+@layer flarian-ui {
+	html,
+	body {
+		font-family: var(--ui-font-family);
+		font-size: var(--ui-font-size);
+		font-weight: var(--ui-font-weight);
+		line-height: var(--ui-line-height);
+		color: var(--ui-color-fg);
+		letter-spacing: var(--ui-letter-spacing);
+		background-color: var(--ui-color-bg);
+	}
+}
