@@ -1,0 +1,21 @@
+/**
+ * Общие правила для Vue `<Transition>`, переиспользуемые компонентами через
+ * `composes` (CSS Modules) — не через дублирование в каждом
+ * `<Name>.module.pcss`. Ссылаются на `--ui-transition-duration`/
+ * `--ui-transition-easing` (config/motion) — потребитель переключает
+ * анимацию сразу у всех компонентов, использующих `composes` отсюда,
+ * в одном месте.
+ *
+ * `composes` не выносит класс в глобальный неймспейс потребителя: итоговое
+ * имя у компонента остаётся своим, захэшированным per-компонент — берётся
+ * только CSS-правило, не сам класс.
+ */
+.fadeEnterActive,
+.fadeLeaveActive {
+	transition: opacity var(--ui-transition-duration) var(--ui-transition-easing);
+}
+
+.fadeEnterFrom,
+.fadeLeaveTo {
+	opacity: 0;
+}
