@@ -1,0 +1,61 @@
+:root {
+	/* Colors */
+	--hui-color-bg: var(--ui-color-bg);
+	--hui-color-fg: var(--ui-color-fg);
+	--hui-color-base: var(--ui-color-base);
+	--hui-color-border: var(--ui-color-border);
+
+	/* Radius */
+	--hui-radius-xs: 0.25rem;
+	--hui-radius-sm: 0.5rem;
+	--hui-radius-md: 1rem;
+	--hui-radius-lg: 1.5rem;
+	--hui-radius-xl: 2rem;
+
+	/* Transition duration */
+	--hui-duration-fast: 250ms;
+	--hui-duration-medium: 500ms;
+	--hui-duration-slow: 1000ms;
+
+	/* Font */
+	font-size: 16px;
+}
+
+body {
+	color: var(--hui-color-fg);
+	background: var(--hui-color-bg);
+}
+
+/**
+ * Storybook - окно предварительного просмотра.
+ */
+.histoire-story-responsive-preview {
+	padding: 1rem;
+
+	& .bind-preview-bg {
+		background: var(--hui-color-bg) !important;
+		border: 1px solid var(--hui-color-border) !important;
+	}
+
+	/* Убираем отступы у контейнера для iframe их установит компонент StoryPreview */
+	& [data-test-id='responsive-preview-bg'] > div {
+		padding: 0 !important;
+	}
+}
+
+/**
+ * Storybook - компонент select
+ */
+.v-popper--theme-dropdown {
+	color: var(--hui-color-fg) !important;
+}
+
+/**
+ * Storybook - компонент popover и select options
+ */
+@scope (:root) to (.__histoire-render-story:not(.__histoire-render-custom-controls)) {
+	.v-popper--theme-dropdown .v-popper__inner {
+		color: var(--hui-color-fg) !important;
+		background: var(--hui-color-bg) !important;
+	}
+}
