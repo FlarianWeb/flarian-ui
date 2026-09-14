@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`writeIconAugmentation > snapshot 1`] = `
+"// Авто-генерируется плагином uiPlugin. Не редактировать вручную.
+export {};
+declare module '@flarian/ui' {
+	interface RegistryIcon {
+		'brand/star': true;
+		'brand/logo': true;
+	}
+}
+"
+`;
+
+exports[`writeIconConstants > snapshot 1`] = `
+"// Авто-генерируется плагином uiPlugin. Не редактировать вручную.
+
+export const brandIcon = {
+	brandStar: 'brand/star',
+	brandLogo: 'brand/logo',
+} as const;
+"
+`;
+
+exports[`writeIconTypes > snapshot 1`] = `
+"// Авто-генерируется плагином uiPlugin из src/assets/icons/ui/.
+// Не редактировать вручную — изменения будут перезаписаны.
+
+export const iconNames = {
+	uiBell: 'ui/bell',
+	uiCalendarCheck: 'ui/calendar-check',
+} as const;
+
+export type BuiltInIcon = (typeof iconNames)[keyof typeof iconNames];
+"
+`;

@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`writeRegistryAugmentation > snapshot 1`] = `
+"// Авто-генерируется плагином uiPlugin. Не редактировать вручную.
+export {};
+declare module '@flarian/ui' {
+	interface RegistryTheme {
+		'ocean': true;
+		'forest': true;
+	}
+}
+"
+`;

@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateInject > vite-dev: дефолтные опции (snapshot) 1`] = `
+"import '@flarian/ui/styles';
+import '\\0flarian-ui-theme.css';
+import '\\0flarian-ui-surface.css';
+import '\\0flarian-ui-colors.css';
+import '\\0flarian-ui-tokens.css';
+import { provideConfig, provideSprite } from '@flarian/ui/runtime';
+
+provideConfig({"theme":{"attribute":"data-theme","list":["base"],"default":"base"},"surface":{"attribute":"data-surface","list":["base"],"default":"base"},"scheme":{"default":"auto","attribute":"data-scheme","dark":"dark","light":"light"},"components":{"button":{"props":{"direction":"row","variant":"solid","size":"md","radius":"xs","color":"base"}},"icon":{"props":{"size":"md"}}},"a11y":{"motion":true,"transparency":true},"storagePrefix":"flarian-ui"});
+provideSprite({ inline: "<svg id=\\"s\\"></svg>" });"
+`;

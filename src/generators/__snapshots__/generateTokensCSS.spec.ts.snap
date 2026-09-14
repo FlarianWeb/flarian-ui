@@ -1,0 +1,116 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateTokensCSS > генерирует CSS с дефолтными значениями (snapshot) 1`] = `
+"@layer flarian-ui {
+:root {
+	--ui-backdrop-none: 0;
+	--ui-backdrop-xxs: 0.25rem;
+	--ui-backdrop-xs: 0.5rem;
+	--ui-backdrop-sm: 0.75rem;
+	--ui-backdrop-md: 1rem;
+	--ui-backdrop-lg: 1.25rem;
+	--ui-backdrop-xl: 1.5rem;
+	--ui-backdrop-xxl: 1.75rem;
+	--ui-backdrop-full: 2rem;
+	--ui-control-font-size-xs: 0.625rem;
+	--ui-control-font-size-sm: 0.75rem;
+	--ui-control-font-size-md: 0.875rem;
+	--ui-control-font-size-lg: 1rem;
+	--ui-control-font-size-xl: 1.125rem;
+	--ui-control-icon-size-xs: 0.875rem;
+	--ui-control-icon-size-sm: 1rem;
+	--ui-control-icon-size-md: 1.125rem;
+	--ui-control-icon-size-lg: 1.25rem;
+	--ui-control-icon-size-xl: 1.375rem;
+	--ui-control-line-height-xs: 0.875rem;
+	--ui-control-line-height-sm: 1rem;
+	--ui-control-line-height-md: 1.125rem;
+	--ui-control-line-height-lg: 1.25rem;
+	--ui-control-line-height-xl: 1.375rem;
+	--ui-duration-fast: 200ms;
+	--ui-duration-normal: 400ms;
+	--ui-duration-slow: 800ms;
+	--ui-easing-linear: linear;
+	--ui-easing-ease: ease-in-out;
+	--ui-easing-ease-in: ease-in;
+	--ui-easing-ease-out: ease-out;
+	--ui-easing-sine: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+	--ui-easing-sine-in: cubic-bezier(0.47, 0, 0.74, 0.71);
+	--ui-easing-sine-out: cubic-bezier(0.39, 0.58, 0.57, 1);
+	--ui-easing-quadratic: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+	--ui-easing-quadratic-in: cubic-bezier(0.55, 0.09, 0.68, 0.53);
+	--ui-easing-quadratic-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--ui-easing-cubic: cubic-bezier(0.65, 0.05, 0.36, 1);
+	--ui-easing-cubic-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+	--ui-easing-cubic-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+	--ui-easing-quartic: cubic-bezier(0.77, 0, 0.18, 1);
+	--ui-easing-quartic-in: cubic-bezier(0.9, 0.03, 0.69, 0.22);
+	--ui-easing-quartic-out: cubic-bezier(0.17, 0.84, 0.44, 1);
+	--ui-easing-quintic: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+	--ui-easing-quintic-in: cubic-bezier(0.23, 1, 0.32, 1);
+	--ui-easing-quintic-out: cubic-bezier(0.86, 0, 0.07, 1);
+	--ui-easing-exponential: cubic-bezier(1, 0, 0, 1);
+	--ui-easing-exponential-in: cubic-bezier(0.95, 0.05, 0.8, 0.04);
+	--ui-easing-exponential-out: cubic-bezier(0.19, 1, 0.22, 1);
+	--ui-easing-circular: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+	--ui-easing-circular-in: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+	--ui-easing-circular-out: cubic-bezier(0.08, 0.82, 0.17, 1);
+	--ui-easing-backward: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	--ui-easing-backward-in: cubic-bezier(0.6, -0.28, 0.74, 0.05);
+	--ui-easing-backward-out: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	--ui-font-size-xs: 0.75rem;
+	--ui-font-size-sm: 0.875rem;
+	--ui-font-size-md: 1rem;
+	--ui-font-size-lg: 1.125rem;
+	--ui-font-size-xl: 1.25rem;
+	--ui-font-weight-hairline: 100;
+	--ui-font-weight-thin: 200;
+	--ui-font-weight-light: 300;
+	--ui-font-weight-regular: 400;
+	--ui-font-weight-medium: 500;
+	--ui-font-weight-semibold: 600;
+	--ui-font-weight-bold: 700;
+	--ui-font-weight-heavy: 800;
+	--ui-font-weight-black: 900;
+	--ui-radius-none: 0;
+	--ui-radius-xxs: 0.25rem;
+	--ui-radius-xs: .375rem;
+	--ui-radius-sm: 0.5rem;
+	--ui-radius-md: 0.75rem;
+	--ui-radius-lg: 1rem;
+	--ui-radius-xl: 1.5rem;
+	--ui-radius-xxl: 2rem;
+	--ui-radius-full: 100rem;
+	--ui-shadow-xs: 0 0.0625rem 0.125rem 0 var(--ui-color-shadow-xs, var(--ui-color-shadow));
+	--ui-shadow-sm: 0 0.0625rem 0.1875rem 0 var(--ui-color-shadow-sm, var(--ui-color-shadow)), 0 0.0625rem 0.125rem -0.0625rem var(--ui-color-shadow-sm, var(--ui-color-shadow));
+	--ui-shadow-md: 0 0.25rem 0.375rem -0.0625rem var(--ui-color-shadow-md, var(--ui-color-shadow)), 0 0.125rem 0.25rem -0.125rem var(--ui-color-shadow-md, var(--ui-color-shadow));
+	--ui-shadow-lg: 0 0.625rem 0.9375rem -0.1875rem var(--ui-color-shadow-lg, var(--ui-color-shadow)), 0 0.25rem 0.375rem -0.25rem var(--ui-color-shadow-lg, var(--ui-color-shadow));
+	--ui-shadow-xl: 0 1.25rem 1.5625rem -0.3125rem var(--ui-color-shadow-xl, var(--ui-color-shadow)), 0 0.5rem 0.625rem -0.375rem var(--ui-color-shadow-xl, var(--ui-color-shadow));
+	--ui-space-none: 0;
+	--ui-space-px: 1px;
+	--ui-space-xs: 0.75rem;
+	--ui-space-sm: 0.875rem;
+	--ui-space-md: 1rem;
+	--ui-space-lg: 1.125rem;
+	--ui-space-xl: 1.25rem;
+	--ui-font-family: "Inter", sans-serif;
+	--ui-font-size: 16px;
+	--ui-font-weight: var(--ui-font-weight-regular);
+	--ui-line-height: 1.5em;
+	--ui-letter-spacing: 0em;
+	--ui-paragraph-spacing: 1rem;
+	--ui-transition-duration: var(--ui-duration-fast);
+	--ui-transition-easing: var(--ui-easing-sine);
+}
+
+[no-motion] *, [no-motion] *::before, [no-motion] *::after {
+	animation-duration: 1ms !important;
+	transition-duration: 1ms !important;
+	scroll-behavior: auto !important;
+}
+
+[no-transparency] * {
+	backdrop-filter: none !important;
+}
+}"
+`;
