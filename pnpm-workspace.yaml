@@ -1,0 +1,10 @@
+# Точные версии без ^: иначе две установки одного коммита получают разный код.
+saveExact: true
+
+# vite-node из Histoire тянет vite 7: без подмены в dev и сборке оказались бы две копии Vite с разными плагинами.
+overrides:
+  vite: 8.1.5
+
+# Бинарник esbuild приходит платформенной зависимостью, его postinstall только перепроверяет её.
+ignoredBuiltDependencies:
+  - esbuild

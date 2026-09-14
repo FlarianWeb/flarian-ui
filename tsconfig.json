@@ -1,0 +1,51 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"lib": ["esnext", "DOM"],
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"noUnusedLocals": true,
+		"jsx": "preserve",
+		"resolveJsonModule": true,
+		"outDir": "dist",
+		"declaration": true,
+		"declarationMap": true,
+		"paths": {
+			"@flarian/ui": ["./src/index.ts"],
+			"@flarian/ui/inject": ["./src/flarian-ui.inject.ts"],
+			"@flarian/ui/runtime": ["./src/runtime/index.ts"],
+			"@/*": ["./*"],
+			"~/*": ["./src/*"]
+		},
+		"types": ["vite/client", "vitest/globals"]
+	},
+	"vueCompilerOptions": {
+		"plugins": [
+			"@vue/language-plugin-pug",
+			{
+				"name": "@flarian/language-plugin-css-modules",
+				"localsConvention": "camelCase"
+			}
+		],
+		"resolveStyleImports": true,
+		"strictCssModules": true,
+		"strictTemplates": true,
+		"fallthroughAttributes": true,
+		"dataAttributes": ["data-*"],
+		"extensions": [".vue", ".pcss"]
+	},
+	"extends": "@vue/tsconfig/tsconfig.json",
+	"include": [
+		"*.d.ts",
+		"src/**/*.ts",
+		"src/**/*.vue",
+		"histoire/**/*.ts",
+		"histoire/**/*.vue",
+		"groups.config.ts"
+	],
+	"exclude": ["node_modules", "dist"]
+}
