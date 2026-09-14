@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateFoucScript > дефолтные опции (snapshot) 1`] = `"(function(){try{var d=document.documentElement;var s=localStorage.getItem('flarian-ui-scheme');if(s!=='dark'&&s!=='light'){s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}d.setAttribute('data-scheme',s==='dark'?'dark':'light');var t=localStorage.getItem('flarian-ui-theme');if(["base"].indexOf(t)<0){t='base';}if(t&&t!=='base'){d.setAttribute('data-theme',t);}var sf=localStorage.getItem('flarian-ui-surface');if(["base"].indexOf(sf)<0){sf='base';}if(sf!=='base'){d.setAttribute('data-surface',sf);}}catch(e){}})();"`;

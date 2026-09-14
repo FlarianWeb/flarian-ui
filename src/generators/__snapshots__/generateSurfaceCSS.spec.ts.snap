@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateSurfaceCSS > генерирует CSS с дефолтными значениями (snapshot) 1`] = `
+"@layer flarian-ui {
+:root {
+	--ui-surface-50: #fafafa;
+	--ui-surface-100: #f5f5f5;
+	--ui-surface-200: #e5e5e5;
+	--ui-surface-300: #d4d4d4;
+	--ui-surface-400: #a3a3a3;
+	--ui-surface-500: #737373;
+	--ui-surface-600: #525252;
+	--ui-surface-700: #404040;
+	--ui-surface-800: #262626;
+	--ui-surface-900: #171717;
+	--ui-surface-950: #0a0a0a;
+	--ui-color-error: #ef4444;
+	--ui-color-on-error: var(--ui-color-white);
+	--ui-color-warning: #f59e0b;
+	--ui-color-on-warning: var(--ui-color-white);
+	--ui-color-success: #22c55e;
+	--ui-color-on-success: var(--ui-color-white);
+	--ui-color-info: #3b82f6;
+	--ui-color-on-info: var(--ui-color-white);
+}
+
+[data-surface='base'] {
+	--ui-surface-50: #fafafa;
+	--ui-surface-100: #f5f5f5;
+	--ui-surface-200: #e5e5e5;
+	--ui-surface-300: #d4d4d4;
+	--ui-surface-400: #a3a3a3;
+	--ui-surface-500: #737373;
+	--ui-surface-600: #525252;
+	--ui-surface-700: #404040;
+	--ui-surface-800: #262626;
+	--ui-surface-900: #171717;
+	--ui-surface-950: #0a0a0a;
+	--ui-color-error: #ef4444;
+	--ui-color-on-error: var(--ui-color-white);
+	--ui-color-warning: #f59e0b;
+	--ui-color-on-warning: var(--ui-color-white);
+	--ui-color-success: #22c55e;
+	--ui-color-on-success: var(--ui-color-white);
+	--ui-color-info: #3b82f6;
+	--ui-color-on-info: var(--ui-color-white);
+}
+}"
+`;

@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateColorsCSS > Генерирует CSS с дефолтными значениями (snapshot) 1`] = `
+"@layer flarian-ui {
+:root {
+	--ui-color-black: #000000;
+	--ui-color-white: #ffffff;
+}
+
+[data-scheme='light'] {
+	--ui-color-bg: var(--ui-color-white);
+	--ui-color-fg: var(--ui-color-black);
+	--ui-color-caption: color-mix(in srgb, var(--ui-color-fg) 40%, transparent);
+	--ui-color-shadow: rgb(0 0 0 / 25%);
+}
+
+[no-transparency][data-scheme='light'] {
+	--ui-color-caption: color-mix(in srgb, var(--ui-color-fg) 40%, var(--ui-color-bg));
+}
+
+[data-scheme='dark'] {
+	--ui-color-bg: var(--ui-color-black);
+	--ui-color-fg: var(--ui-color-white);
+	--ui-color-caption: color-mix(in srgb, var(--ui-color-fg) 40%, transparent);
+	--ui-color-shadow: rgb(0 0 0 / 75%);
+}
+
+[no-transparency][data-scheme='dark'] {
+	--ui-color-caption: color-mix(in srgb, var(--ui-color-fg) 40%, var(--ui-color-bg));
+}
+}"
+`;

@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateThemeCSS > генерирует CSS с дефолтными значениями (snapshot) 1`] = `
+"@layer flarian-ui {
+:root {
+	--ui-theme-base: #2eb82e;
+	--ui-theme-on-base: var(--ui-color-white);
+}
+
+[data-theme='base'] {
+	--ui-theme-base: #2eb82e;
+	--ui-theme-on-base: var(--ui-color-white);
+}
+}"
+`;
