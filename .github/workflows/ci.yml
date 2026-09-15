@@ -1,0 +1,57 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - master
+
+# Новый пуш в PR отменяет устаревший запуск: результат нужен только для последнего коммита.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # Имя job — идентификатор обязательной проверки в ruleset master: при переименовании обновить ruleset.
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Версию pnpm берёт из поля packageManager в package.json.
+      - uses: pnpm/action-setup@v4
+
+      # engines требует >=22.18.0: с этой версии node запускает .ts без флагов (scripts/scaffold-component.ts).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+      - name: Build stories
+        run: pnpm story:build
+
+      # Сборки перегенерируют src/generated и histoire/generated: расхождение значит, что свежие файлы забыли закоммитить.
+      - name: Check generated files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --porcelain
+            git diff
+            echo "::error::Сгенерированные файлы не совпадают с закоммиченными: запусти сборку локально и закоммить изменения."
+            exit 1
+          fi
