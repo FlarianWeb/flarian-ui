@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {
 	buildIcons,
@@ -72,6 +72,20 @@ describe('buildIcons', () => {
 		expect(ids).toHaveLength(2);
 		expect(ids).toContain('ui/bell');
 		expect(ids).toContain('ui/star');
+	});
+
+	it('сортирует файлы независимо от порядка readdirSync', () => {
+		fs.writeFileSync(path.join(tmpDir, 'bell.svg'), '<svg></svg>');
+		fs.writeFileSync(path.join(tmpDir, 'star.svg'), '<svg></svg>');
+
+		const readdir = vi.spyOn(fs, 'readdirSync').mockReturnValue(['star.svg', 'bell.svg'] as never);
+
+		const { ids, symbols } = buildIcons(tmpDir, 'ui');
+
+		readdir.mockRestore();
+
+		expect(ids).toEqual(['ui/bell', 'ui/star']);
+		expect(symbols.indexOf('ui/bell')).toBeLessThan(symbols.indexOf('ui/star'));
 	});
 });
 

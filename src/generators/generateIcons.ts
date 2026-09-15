@@ -21,7 +21,14 @@ export const buildIcons = (dir: string, namespace: string): { ids: string[]; sym
 		return { symbols: '', ids };
 	}
 
-	const files = fs.readdirSync(dir).filter(f => f.endsWith('.svg'));
+	/**
+	 * Порядок `readdirSync` зависит от файловой системы: без сортировки на Linux
+	 * `src/generated/icons.ts` и спрайт расходились бы с собранными на macOS.
+	 */
+	const files = fs
+		.readdirSync(dir)
+		.filter(f => f.endsWith('.svg'))
+		.sort();
 
 	for (const file of files) {
 		const iconName = path.basename(file, '.svg');
