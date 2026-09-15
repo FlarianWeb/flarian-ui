@@ -28,16 +28,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Полная история нужна, чтобы найти последний тег и коммиты после него.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v4
+      # Без кеша: store из кеша могли записать другие workflow, а здесь есть права на публикацию.
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
-          cache: pnpm
 
       # Доверенный выпуск требует npm не ниже 11.5.1, в Node 22 идёт npm 10.
       - name: Update npm
@@ -47,10 +47,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       # Сборку запускает prepack при публикации, отдельный шаг build не нужен.
+      # В npm публикует только доверенный издатель (OIDC): NPM_TOKEN сюда не передаётся,
+      # а публикация токенами для пакета запрещена в настройках npm.
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Запасной путь: @semantic-release/npm сначала пробует доверенный выпуск и берёт токен,
-          # только если обмен OIDC не удался. После настройки trusted publisher секрет удалить.
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm exec semantic-release ${{ inputs.dry_run && '--dry-run' || '' }}
