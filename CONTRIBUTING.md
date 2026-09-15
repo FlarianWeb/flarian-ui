@@ -10,6 +10,7 @@
 ```bash
 pnpm story:dev     # histoire - среда разработки компонентов
 pnpm test:unit     # vitest --typecheck (watch)
+pnpm test          # тесты одним прогоном, как в CI
 pnpm typecheck     # генерация .d.ts для pcss + vue-tsc
 pnpm lint:fix
 ```
@@ -90,5 +91,7 @@ pnpm scaffold <Group>/<Name>   # например: pnpm scaffold Display/Badge
 
 ## Чек-лист перед PR
 ```bash
-pnpm test:unit && pnpm lint && pnpm typecheck && pnpm build && pnpm story:build
+pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm story:build
 ```
+Те же шаги запускает CI в каждом PR (`.github/workflows/ci.yml`) и дополнительно проверяет,
+что после сборок сгенерированные файлы совпадают с закоммиченными.
