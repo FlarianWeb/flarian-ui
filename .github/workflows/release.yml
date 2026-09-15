@@ -1,0 +1,56 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Только посчитать версию и заметки, без публикации
+        type: boolean
+        default: true
+
+# Два выпуска одновременно посчитали бы одну и ту же версию.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  # Тег и GitHub Release.
+  contents: write
+  # Комментарии «вошло в версию» в закрытых ишью и влитых PR.
+  issues: write
+  pull-requests: write
+  # Provenance и доверенный выпуск: workflow меняет OIDC-токен на короткоживущий ключ npm.
+  id-token: write
+
+jobs:
+  release:
+    # Кнопка позволяет выбрать любую ветку, но выпускать можно только из master.
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      # Полная история нужна, чтобы найти последний тег и коммиты после него.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      # Доверенный выпуск требует npm не ниже 11.5.1, в Node 22 идёт npm 10.
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Сборку запускает prepack при публикации, отдельный шаг build не нужен.
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Запасной путь: @semantic-release/npm сначала пробует доверенный выпуск и берёт токен,
+          # только если обмен OIDC не удался. После настройки trusted publisher секрет удалить.
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm exec semantic-release ${{ inputs.dry_run && '--dry-run' || '' }}

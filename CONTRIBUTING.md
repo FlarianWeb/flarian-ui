@@ -95,3 +95,11 @@ pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm story:build
 ```
 Те же шаги запускает CI в каждом PR (`.github/workflows/ci.yml`) и дополнительно проверяет,
 что после сборок сгенерированные файлы совпадают с закоммиченными.
+
+---
+
+## Релиз
+Выпуск только вручную: Actions → **Release** → Run workflow (ветка master).
+- `dry_run` включён по умолчанию: покажет следующую версию и заметки, ничего не публикуя. Для выпуска — снять галочку.
+- Версию считает semantic-release по коммитам с прошлого тега: `fix` → patch, `feat` → minor, `BREAKING CHANGE` → major. Если были только `chore`/`docs`/`ci`/`build`/`style`/`test`/`refactor` — релиза не будет.
+- Результат: пакет в npm, тег `vX.Y.Z` и GitHub Release с заметками. В master ничего не коммитится, `version` в `package.json` — заглушка, реальная версия ставится при публикации.
