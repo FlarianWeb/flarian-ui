@@ -78,7 +78,9 @@ describe('buildIcons', () => {
 		fs.writeFileSync(path.join(tmpDir, 'bell.svg'), '<svg></svg>');
 		fs.writeFileSync(path.join(tmpDir, 'star.svg'), '<svg></svg>');
 
-		const readdir = vi.spyOn(fs, 'readdirSync').mockReturnValue(['star.svg', 'bell.svg'] as never);
+		const readdir = vi
+			.spyOn(fs, 'readdirSync')
+			.mockReturnValue(['star.svg', 'bell.svg'] as never);
 
 		const { ids, symbols } = buildIcons(tmpDir, 'ui');
 
