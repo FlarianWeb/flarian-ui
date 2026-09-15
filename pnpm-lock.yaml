@@ -17,10 +17,10 @@ importers:
     devDependencies:
       '@flarian/frontend-preset':
         specifier: 3.0.0
-        version: 3.0.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0))(postcss@8.5.19)(prettier@3.9.6)(stylelint@17.15.0(typescript@6.0.3))(typescript@6.0.3)
+        version: 3.0.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0))(postcss@8.5.28)(prettier@3.9.6)(stylelint@17.15.0(typescript@6.0.3))(typescript@6.0.3)
       '@flarian/language-plugin-css-modules':
         specifier: 1.0.0
-        version: 1.0.0(postcss@8.5.19)
+        version: 1.0.0(postcss@8.5.28)
       '@fontsource-variable/inter':
         specifier: 5.3.0
         version: 5.3.0
@@ -43,8 +43,8 @@ importers:
         specifier: 6.0.8
         version: 6.0.8(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))(vue@3.5.40(typescript@6.0.3))
       '@vitest/coverage-v8':
-        specifier: 4.1.10
-        version: 4.1.10(vitest@4.1.10)
+        specifier: 4.1.11
+        version: 4.1.11(vitest@4.1.11)
       '@vue/language-plugin-pug':
         specifier: 3.3.11
         version: 3.3.11
@@ -70,11 +70,11 @@ importers:
         specifier: 29.1.1
         version: 29.1.1
       postcss:
-        specifier: 8.5.19
-        version: 8.5.19
+        specifier: 8.5.28
+        version: 8.5.28
       postcss-nested:
         specifier: 7.0.2
-        version: 7.0.2(postcss@8.5.19)
+        version: 7.0.2(postcss@8.5.28)
       prettier:
         specifier: 3.9.6
         version: 3.9.6
@@ -106,8 +106,8 @@ importers:
         specifier: 0.4.1
         version: 0.4.1
       vitest:
-        specifier: 4.1.10
-        version: 4.1.10(@types/node@24.13.3)(@vitest/coverage-v8@4.1.10)(jsdom@29.1.1)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))
+        specifier: 4.1.11
+        version: 4.1.11(@types/node@24.13.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))
       vue:
         specifier: 3.5.40
         version: 3.5.40(typescript@6.0.3)
@@ -1203,20 +1203,20 @@ packages:
       vite: 8.1.5
       vue: ^3.2.25
 
-  '@vitest/coverage-v8@4.1.10':
-    resolution: {integrity: sha512-IM49HmthevbgAO4anp1hwtoT9wYe59w0LR00gr+eagHE+ZJ5lK4sLPeO0ubgoJcwLk6dehU3R24N+FbEEKDc8g==}
+  '@vitest/coverage-v8@4.1.11':
+    resolution: {integrity: sha512-8MVGEFnJIcdGjcbfKmeq8z0pZHH0JlVtoVZH9Q/qwUp6wyFnEJUBMrw9DCaj+ra3vShGmhavjalMIhPNxZAUcw==}
     peerDependencies:
-      '@vitest/browser': 4.1.10
-      vitest: 4.1.10
+      '@vitest/browser': 4.1.11
+      vitest: 4.1.11
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
 
-  '@vitest/expect@4.1.10':
-    resolution: {integrity: sha512-YsCn+qAk1GWjQOWFEsEcL2gNQ0zmVmQu3T03qP6UyjhtmdtwtbuI+DASn/7iQB3HGTXkdBwGddzxPlmiql5vlA==}
+  '@vitest/expect@4.1.11':
+    resolution: {integrity: sha512-VX2x5vNJXET47KAFzwERI+KRMtTTCSWTfSMKsW7JsUsXV4psq++e3DvZpuTDOpHcxytiDs6p2nhVb2tVDiiUYw==}
 
-  '@vitest/mocker@4.1.10':
-    resolution: {integrity: sha512-v0xaezt+DKEmKfaxg133ldzADrwLGd7Ze1MfQQTYfvs8OqZIwbxyxaYURivwV7sWy5fqn3rH5uOrSp07bp44Ow==}
+  '@vitest/mocker@4.1.11':
+    resolution: {integrity: sha512-2XJVD55d1o5AZous5CCGKS74g/riOj9odEt2bQpCVZeblHyHdnMeFl4jl0XjU21stf4mbjUkew2eXQZt65g5CQ==}
     peerDependencies:
       msw: ^2.4.9
       vite: 8.1.5
@@ -1226,20 +1226,20 @@ packages:
       vite:
         optional: true
 
-  '@vitest/pretty-format@4.1.10':
-    resolution: {integrity: sha512-W1HsjSH4MXQ9YfmmhLAoIYf1HRfekQCGngeIgcei6MP5QQGWUe0gkopdZQaVCFO+JDJMrAJGwa5pRpNpvy4P8Q==}
+  '@vitest/pretty-format@4.1.11':
+    resolution: {integrity: sha512-yiZzPbGTS9Sr/JpFl8zHrcIkAofNbFV6k21vIgQN/cY/oxZeXhJv5sc/MBJ5jFKWmWs+oJHw0UXLZjmf931+Vw==}
 
-  '@vitest/runner@4.1.10':
-    resolution: {integrity: sha512-IKI6kpIH+LmpROplyLwBBaCfMgOZOMsygVa6BARD6ahA04VRuJSa6OaVG7kRvSEMD870Vd91rSSw0eegtWyLGg==}
+  '@vitest/runner@4.1.11':
+    resolution: {integrity: sha512-LztvUgdwMNJMIkj3hQnnxiC2Xy1zNxq928W/xhjCLaNCzqTZOudjwbQf6v9IntZGPw132i2Lq2rgTRZHD3JHNw==}
 
-  '@vitest/snapshot@4.1.10':
-    resolution: {integrity: sha512-xRkfOT1qpTAi/Ti4Y1LtfRc3kEuqxGw59eN2jN9pRWMtS/XDevekhcFSqvQqjUNGksfjMJu3Y+oJ+4Ypn2OaJw==}
+  '@vitest/snapshot@4.1.11':
+    resolution: {integrity: sha512-pN7ikn1ON7h8ee4gIAp4AzyK+zBtJPzVbqOgu5LCEh4VaJVbPQcgYQYJIMGQPXVeJJq1fnfazis7a5pFNPahog==}
 
-  '@vitest/spy@4.1.10':
-    resolution: {integrity: sha512-PLf/Ugvoq5wO/b4rwYCR1h2PSIdXz7wnkQFMiUpLdtM7l6pqVFcQIBEHyT1+l+cj7mNwAfZHzqXqDyjvOuwbDw==}
+  '@vitest/spy@4.1.11':
+    resolution: {integrity: sha512-apNa/prQy2qCeywhnixOHPRCgGNhvg7T4Dapfl1GahLp/R+uhBm5cPyFoNVyqsNd2h1nJxL6BqqdIjiABL60YA==}
 
-  '@vitest/utils@4.1.10':
-    resolution: {integrity: sha512-fy9am/HWxbaGt/Sawrp90vt6Y6jQwf1RX77cz3uwoJwJVMli/e1IEwRPnMNJ7vKfPTwo0diXifkpPvwH9v7nGA==}
+  '@vitest/utils@4.1.11':
+    resolution: {integrity: sha512-zTCVGpyFsGWBhllOyKlTw/vnr6D9qxsfSDyfbyZmTyjHw5N/VuvzHpHoQjm2ZJzn4RJgx5w4r7V0er69CmLgPQ==}
 
   '@volar/language-core@2.4.28':
     resolution: {integrity: sha512-w4qhIJ8ZSitgLAkVay6AbcnC7gP3glYM3fYwKV3srj8m494E3xtrCv6E+bWviiK/8hs6e6t1ij1s2Endql7vzQ==}
@@ -3515,10 +3515,6 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.19:
-    resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
-    engines: {node: ^10 || ^12 || >=14}
-
   postcss@8.5.28:
     resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
@@ -4475,20 +4471,20 @@ packages:
       yaml:
         optional: true
 
-  vitest@4.1.10:
-    resolution: {integrity: sha512-R9jUTe5S4Qb0HCd4TNqpC7oGcrMssMRGXLW80ubjWsW9VH5GF8y1Y0SFLY9AbqSk6nt0PnOx4H4WNJYZ13GUPw==}
+  vitest@4.1.11:
+    resolution: {integrity: sha512-fhACrNXUidIbGSBr5FlbuBkO7VWC1ZyLl0DO4CU2DrQoAPxX84Ysxs+HeGQpii5lZWV1Q4gBZTTu49mF+A6Edw==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@opentelemetry/api': ^1.9.0
       '@types/node': ^20.0.0 || ^22.0.0 || >=24.0.0
-      '@vitest/browser-playwright': 4.1.10
-      '@vitest/browser-preview': 4.1.10
-      '@vitest/browser-webdriverio': 4.1.10
-      '@vitest/coverage-istanbul': 4.1.10
-      '@vitest/coverage-v8': 4.1.10
-      '@vitest/ui': 4.1.10
+      '@vitest/browser-playwright': 4.1.11
+      '@vitest/browser-preview': 4.1.11
+      '@vitest/browser-webdriverio': 4.1.11
+      '@vitest/coverage-istanbul': 4.1.11
+      '@vitest/coverage-v8': 4.1.11
+      '@vitest/ui': 4.1.11
       happy-dom: '*'
       jsdom: '*'
       vite: 8.1.5
@@ -5096,7 +5092,7 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@flarian/frontend-preset@3.0.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0))(postcss@8.5.19)(prettier@3.9.6)(stylelint@17.15.0(typescript@6.0.3))(typescript@6.0.3)':
+  '@flarian/frontend-preset@3.0.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0))(postcss@8.5.28)(prettier@3.9.6)(stylelint@17.15.0(typescript@6.0.3))(typescript@6.0.3)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.10.0(jiti@2.7.0))
       '@prettier/plugin-pug': 3.4.2(prettier@3.9.6)
@@ -5113,9 +5109,9 @@ snapshots:
       postcss-html: 1.8.1
       stylelint-config-recommended-vue: 1.6.1(postcss-html@1.8.1)(stylelint@17.15.0(typescript@6.0.3))
       stylelint-config-standard: 40.0.0(stylelint@17.15.0(typescript@6.0.3))
-      stylelint-config-standard-less: 4.1.0(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3))
-      stylelint-config-standard-scss: 17.0.0(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3))
-      stylelint-less: 4.2.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3))
+      stylelint-config-standard-less: 4.1.0(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3))
+      stylelint-config-standard-scss: 17.0.0(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3))
+      stylelint-less: 4.2.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3))
       stylelint-order: 8.1.1(stylelint@17.15.0(typescript@6.0.3))
       stylelint-scss: 7.2.0(stylelint@17.15.0(typescript@6.0.3))
       typescript-eslint: 8.70.0(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3)
@@ -5131,10 +5127,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@flarian/language-plugin-css-modules@1.0.0(postcss@8.5.19)':
+  '@flarian/language-plugin-css-modules@1.0.0(postcss@8.5.28)':
     dependencies:
       lodash.camelcase: 4.3.0
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   '@fontsource-variable/inter@5.3.0': {}
 
@@ -5822,10 +5818,10 @@ snapshots:
       vite: 8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)
       vue: 3.5.40(typescript@6.0.3)
 
-  '@vitest/coverage-v8@4.1.10(vitest@4.1.10)':
+  '@vitest/coverage-v8@4.1.11(vitest@4.1.11)':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
-      '@vitest/utils': 4.1.10
+      '@vitest/utils': 4.1.11
       ast-v8-to-istanbul: 1.0.6
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
@@ -5834,46 +5830,46 @@ snapshots:
       obug: 2.2.1
       std-env: 4.2.0
       tinyrainbow: 3.1.1
-      vitest: 4.1.10(@types/node@24.13.3)(@vitest/coverage-v8@4.1.10)(jsdom@29.1.1)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))
+      vitest: 4.1.11(@types/node@24.13.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))
 
-  '@vitest/expect@4.1.10':
+  '@vitest/expect@4.1.11':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@types/chai': 5.2.3
-      '@vitest/spy': 4.1.10
-      '@vitest/utils': 4.1.10
+      '@vitest/spy': 4.1.11
+      '@vitest/utils': 4.1.11
       chai: 6.2.2
       tinyrainbow: 3.1.1
 
-  '@vitest/mocker@4.1.10(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))':
+  '@vitest/mocker@4.1.11(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))':
     dependencies:
-      '@vitest/spy': 4.1.10
+      '@vitest/spy': 4.1.11
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
       vite: 8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)
 
-  '@vitest/pretty-format@4.1.10':
+  '@vitest/pretty-format@4.1.11':
     dependencies:
       tinyrainbow: 3.1.1
 
-  '@vitest/runner@4.1.10':
+  '@vitest/runner@4.1.11':
     dependencies:
-      '@vitest/utils': 4.1.10
+      '@vitest/utils': 4.1.11
       pathe: 2.0.3
 
-  '@vitest/snapshot@4.1.10':
+  '@vitest/snapshot@4.1.11':
     dependencies:
-      '@vitest/pretty-format': 4.1.10
-      '@vitest/utils': 4.1.10
+      '@vitest/pretty-format': 4.1.11
+      '@vitest/utils': 4.1.11
       magic-string: 0.30.21
       pathe: 2.0.3
 
-  '@vitest/spy@4.1.10': {}
+  '@vitest/spy@4.1.11': {}
 
-  '@vitest/utils@4.1.10':
+  '@vitest/utils@4.1.11':
     dependencies:
-      '@vitest/pretty-format': 4.1.10
+      '@vitest/pretty-format': 4.1.11
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.1
 
@@ -5924,7 +5920,7 @@ snapshots:
       '@vue/shared': 3.5.40
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.19
+      postcss: 8.5.28
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.40':
@@ -8293,50 +8289,44 @@ snapshots:
     dependencies:
       htmlparser2: 8.0.2
       js-tokens: 9.0.1
-      postcss: 8.5.19
-      postcss-safe-parser: 6.0.0(postcss@8.5.19)
+      postcss: 8.5.28
+      postcss-safe-parser: 6.0.0(postcss@8.5.28)
 
-  postcss-less@6.0.0(postcss@8.5.19):
+  postcss-less@6.0.0(postcss@8.5.28):
     dependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   postcss-media-query-parser@0.2.3: {}
 
-  postcss-nested@7.0.2(postcss@8.5.19):
+  postcss-nested@7.0.2(postcss@8.5.28):
     dependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
       postcss-selector-parser: 7.1.6
 
   postcss-resolve-nested-selector@0.1.6: {}
 
-  postcss-safe-parser@6.0.0(postcss@8.5.19):
+  postcss-safe-parser@6.0.0(postcss@8.5.28):
     dependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   postcss-safe-parser@7.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
 
-  postcss-scss@4.0.9(postcss@8.5.19):
+  postcss-scss@4.0.9(postcss@8.5.28):
     dependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   postcss-selector-parser@7.1.6:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@10.0.0(postcss@8.5.19):
+  postcss-sorting@10.0.0(postcss@8.5.28):
     dependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   postcss-value-parser@4.2.0: {}
-
-  postcss@8.5.19:
-    dependencies:
-      nanoid: 3.3.19
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.28:
     dependencies:
@@ -8961,23 +8951,23 @@ snapshots:
       postcss-html: 1.8.1
       stylelint: 17.15.0(typescript@6.0.3)
 
-  stylelint-config-recommended-less@4.2.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3)):
+  stylelint-config-recommended-less@4.2.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
-      postcss-less: 6.0.0(postcss@8.5.19)
+      postcss-less: 6.0.0(postcss@8.5.28)
       stylelint: 17.15.0(typescript@6.0.3)
       stylelint-config-recommended: 18.0.0(stylelint@17.15.0(typescript@6.0.3))
-      stylelint-less: 4.2.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3))
+      stylelint-less: 4.2.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3))
     optionalDependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
-  stylelint-config-recommended-scss@17.0.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3)):
+  stylelint-config-recommended-scss@17.0.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
-      postcss-scss: 4.0.9(postcss@8.5.19)
+      postcss-scss: 4.0.9(postcss@8.5.28)
       stylelint: 17.15.0(typescript@6.0.3)
       stylelint-config-recommended: 18.0.0(stylelint@17.15.0(typescript@6.0.3))
       stylelint-scss: 7.2.0(stylelint@17.15.0(typescript@6.0.3))
     optionalDependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   stylelint-config-recommended-vue@1.6.1(postcss-html@1.8.1)(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
@@ -8991,39 +8981,39 @@ snapshots:
     dependencies:
       stylelint: 17.15.0(typescript@6.0.3)
 
-  stylelint-config-standard-less@4.1.0(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3)):
+  stylelint-config-standard-less@4.1.0(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
       stylelint: 17.15.0(typescript@6.0.3)
-      stylelint-config-recommended-less: 4.2.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3))
+      stylelint-config-recommended-less: 4.2.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3))
       stylelint-config-standard: 40.0.0(stylelint@17.15.0(typescript@6.0.3))
     optionalDependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
-  stylelint-config-standard-scss@17.0.0(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3)):
+  stylelint-config-standard-scss@17.0.0(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
       stylelint: 17.15.0(typescript@6.0.3)
-      stylelint-config-recommended-scss: 17.0.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3))
+      stylelint-config-recommended-scss: 17.0.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3))
       stylelint-config-standard: 40.0.0(stylelint@17.15.0(typescript@6.0.3))
     optionalDependencies:
-      postcss: 8.5.19
+      postcss: 8.5.28
 
   stylelint-config-standard@40.0.0(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
       stylelint: 17.15.0(typescript@6.0.3)
       stylelint-config-recommended: 18.0.0(stylelint@17.15.0(typescript@6.0.3))
 
-  stylelint-less@4.2.1(postcss@8.5.19)(stylelint@17.15.0(typescript@6.0.3)):
+  stylelint-less@4.2.1(postcss@8.5.28)(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
       '@types/css-tree': 2.3.11
       css-tree: 3.2.1
-      postcss: 8.5.19
+      postcss: 8.5.28
       postcss-value-parser: 4.2.0
       stylelint: 17.15.0(typescript@6.0.3)
 
   stylelint-order@8.1.1(stylelint@17.15.0(typescript@6.0.3)):
     dependencies:
-      postcss: 8.5.19
-      postcss-sorting: 10.0.0(postcss@8.5.19)
+      postcss: 8.5.28
+      postcss-sorting: 10.0.0(postcss@8.5.28)
       stylelint: 17.15.0(typescript@6.0.3)
 
   stylelint-scss@7.2.0(stylelint@17.15.0(typescript@6.0.3)):
@@ -9486,7 +9476,7 @@ snapshots:
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
-      postcss: 8.5.19
+      postcss: 8.5.28
       rolldown: 1.1.5
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -9495,15 +9485,15 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.7.0
 
-  vitest@4.1.10(@types/node@24.13.3)(@vitest/coverage-v8@4.1.10)(jsdom@29.1.1)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)):
+  vitest@4.1.11(@types/node@24.13.3)(@vitest/coverage-v8@4.1.11)(jsdom@29.1.1)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)):
     dependencies:
-      '@vitest/expect': 4.1.10
-      '@vitest/mocker': 4.1.10(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))
-      '@vitest/pretty-format': 4.1.10
-      '@vitest/runner': 4.1.10
-      '@vitest/snapshot': 4.1.10
-      '@vitest/spy': 4.1.10
-      '@vitest/utils': 4.1.10
+      '@vitest/expect': 4.1.11
+      '@vitest/mocker': 4.1.11(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0))
+      '@vitest/pretty-format': 4.1.11
+      '@vitest/runner': 4.1.11
+      '@vitest/snapshot': 4.1.11
+      '@vitest/spy': 4.1.11
+      '@vitest/utils': 4.1.11
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
       magic-string: 0.30.21
@@ -9519,7 +9509,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.13.3
-      '@vitest/coverage-v8': 4.1.10(vitest@4.1.10)
+      '@vitest/coverage-v8': 4.1.11(vitest@4.1.11)
       jsdom: 29.1.1
     transitivePeerDependencies:
       - msw
