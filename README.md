@@ -126,3 +126,10 @@ CSS-контракт варианта: класс должен читать `--_
 | `@flarian/ui/theme.css`    | Дефолтная тема без плагина                          |
 
 CDN-режим (IIFE, без бандлера): `dist/flarian-ui.iife.js` + ручные `FlarianUI.provideConfig()`/`provideSprite()` - см. `src/cdn/index.ts`.
+
+---
+
+## Лицензия
+[MIT](./LICENSE), включая встроенные иконки `ui/*`.
+
+Шрифт Inter распространяется под [SIL Open Font License 1.1](./src/assets/fonts/inter/LICENSE): текст лицензии лежит рядом со шрифтом и в пакете (`dist/fonts/inter/LICENSE`).
